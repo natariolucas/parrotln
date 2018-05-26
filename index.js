@@ -17,11 +17,11 @@ var mins = fecha.getMinutes();
 
 var postear = function() {
 	T.post('statuses/update', {status: 'Prueba del console'});
-	console.log('Posteo del: ' + dia + '/' + mes + " -- Hora y minutos: " + hs + " : " + mins);
+	console.log("Hora: " + hs + " : " + mins);
 }
 
 ontime({
-	cycle: ['02:24:00']
+	cycle: ['02:25:00']
 }, function(ot) {
 	postear();
 	ot.done()
