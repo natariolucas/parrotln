@@ -21,7 +21,7 @@ var postear = function() {
 }
 
 ontime({
-	cycle: ['02:21:']
+	cycle: ['02:24:00']
 }, function(ot) {
 	postear();
 	ot.done()
