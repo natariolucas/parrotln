@@ -25,6 +25,7 @@ var postearA = function() {
 	T.post('statuses/update', {status: A + noRepetir});
 	//Avisame
 	T.post('direct_messages/new', {screen_name: 'NatarioLucas_', text: 'Posteado A'});
+	console.log('Posteado A');
 }
 
 var postearB = function() {
@@ -32,6 +33,7 @@ var postearB = function() {
 	T.post('statuses/update', {status: B + noRepetir});
 	//Avisame
 	T.post('direct_messages/new', {screen_name: 'NatarioLucas_', text: 'Posteado B'});
+	console.log('Posteado B');
 }
 
 var postearC = function() {
@@ -39,10 +41,11 @@ var postearC = function() {
 	T.post('statuses/update', {status: C + noRepetir});
 	//Avisame
 	T.post('direct_messages/new', {screen_name: 'NatarioLucas_', text: 'Posteado C'});
+	console.log('Posteado C');
 }
 //Ontime controla a que hora se va a ejecutar
 ontime({
-	cycle: ['04:40:00', '04:40:10', '04:40:20']
+	cycle: ['02:00:00']
 }, function(ot) {
 	postearA();
 	postearB();
