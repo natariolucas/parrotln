@@ -15,13 +15,15 @@ var mes = fecha.getMonth();
 var hs  = fecha.getHours();
 var mins = fecha.getMinutes();
 
+var noRepetir = random(100)
+
 var postearA = function() {
-	T.post('statuses/update', {status: 'AAAAAAAAAAAAAAAA'});
+	T.post('statuses/update', {status: 'AAAAAAAAAAAAAAAA' + noRepetir});
 	console.log("Posteado A");
 }
 
 var postearB = function() {
-	T.post('statuses/update', {status: 'BBBBBBBBBBBBBBBB'});
+	T.post('statuses/update', {status: 'BBBBBBBBBBBBBBBB' + noRepetir});
 	console.log("Posteado B");
 }
 
@@ -57,7 +59,7 @@ var postearB = function() {
 
 
 ontime({
-	cycle: ['03:45:00', '03:46:00', '03:47:00']
+	cycle: ['03:56:00', '03:57:00', '03:58:00']
 }, function(ot) {
 	postearA();
 	postearB();
