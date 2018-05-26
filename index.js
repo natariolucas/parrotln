@@ -15,32 +15,34 @@ var T = new twit(
 var noRepetir = Math.random(100);
 
 //Tweets promocionales
-var A = ' UBER promo/gift code May 2018 \n NEW FOR 1ST RIDE!!!!! \n \n👉vj0rbx👈 \n \n \n#UberCode \n#GiftCode \n#Uber';
-var B = 'Conseguí tu primer viaje de Uber gratis usando este código!! Ya ya \n 👉vj0rbx👈 \n \n \n #CodigosUber \n #PromoUber';
-var C = 'Uber promo code for your 1st ride free or a big discount!!!! Only May 2018 \n \n 👉vj0rbx👈  \n \n \n#Uber \n #GiftCode \n #UberGiftCode \n #UberCodes';
+var A = ' UBER promo/gift code May 2018 \n NEW FOR 1ST RIDE!!!!! \n \n👉vj0rbx👈 \n \n \n#UberCode \n#GiftCode \n#Uber \n';
+var B = 'Conseguí tu primer viaje de Uber gratis usando este código!! Ya ya \n 👉vj0rbx👈 \n \n \n #CodigosUber \n #PromoUber \n';
+var C = 'Uber promo code for your 1st ride free or a big discount!!!! Only May 2018 \n \n 👉vj0rbx👈  \n \n \n#Uber \n #GiftCode \n #UberGiftCode \n #UberCodes \n';
 
 //Funciones que twittean
 var postearA = function() {
     noRepetir = Math.random(100);
 	T.post('statuses/update', {status: A + noRepetir});
-	console.log("Posteado A");
+	//Avisame
+	T.post('direct_messages/new', {screen_name: 'NatarioLucas_', text: 'Posteado A'});
 }
 
 var postearB = function() {
 	noRepetir = Math.random(100);
 	T.post('statuses/update', {status: B + noRepetir});
-	console.log("Posteado B");
+	//Avisame
+	T.post('direct_messages/new', {screen_name: 'NatarioLucas_', text: 'Posteado B'});
 }
 
 var postearC = function() {
 	noRepetir = Math.random(100);
 	T.post('statuses/update', {status: C + noRepetir});
-	console.log("Posteado B");
+	//Avisame
+	T.post('direct_messages/new', {screen_name: 'NatarioLucas_', text: 'Posteado C'});
 }
-
 //Ontime controla a que hora se va a ejecutar
 ontime({
-	cycle: ['04:24:00', '04:24:10', '04:24:30']
+	cycle: ['02:00:00']
 }, function(ot) {
 	postearA();
 	postearB();
