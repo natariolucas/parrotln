@@ -15,15 +15,52 @@ var mes = fecha.getMonth();
 var hs  = fecha.getHours();
 var mins = fecha.getMinutes();
 
-var postear = function() {
-	T.post('statuses/update', {status: 'Prueba del consolelogggg'});
-	console.log("Hora: " + hs + " : " + mins);
+var postearA = function() {
+	T.post('statuses/update', {status: 'AAAAAAAAAAAAAAAA'});
+	console.log("Posteado A");
 }
 
+var postearB = function() {
+	T.post('statuses/update', {status: 'BBBBBBBBBBBBBBBB'});
+	console.log("Posteado B");
+}
+
+
+/*var ultTw = function() {T.get('statuses/user_timeline', {user_id: '260895654', count: 1}, function(err, tweet)
+	{
+		if(err)
+		{
+			console.log(err)
+		}
+		else
+		{
+			//Aca entra el ult tweet ya conseguido
+
+			if (tweet[0].text == "A"){
+			postearC();
+			console.log("Posteado C");
+			}
+			else if (tweet[0].text == "CCCCCCCCCCCCCCCCC")
+			{
+				postearB();
+				console.log("Posteado B");
+			}
+			else
+			{
+				postearA();
+				console.log("Posteado A");
+			}
+		}
+	});
+}*/
+
+
+
 ontime({
-	cycle: ['02:25:00']
+	cycle: ['03:45:00', '03:46:00', '03:47:00']
 }, function(ot) {
-	postear();
-	ot.done()
+	postearA();
+	postearB();
+	ot.done();
 	return
 })
