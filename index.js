@@ -15,7 +15,7 @@ var mes = fecha.getMonth();
 var hs  = fecha.getHours();
 var mins = fecha.getMinutes();
 
-var noRepetir = random(100)
+var noRepetir = Math.random(100);
 
 var postearA = function() {
 	T.post('statuses/update', {status: 'AAAAAAAAAAAAAAAA' + noRepetir});
@@ -59,7 +59,7 @@ var postearB = function() {
 
 
 ontime({
-	cycle: ['03:56:00', '03:57:00', '03:58:00']
+	cycle: ['04:03:00', '04:04:00', '04:05:00']
 }, function(ot) {
 	postearA();
 	postearB();
