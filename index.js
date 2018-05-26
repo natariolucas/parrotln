@@ -16,7 +16,7 @@ var hs  = fecha.getHours();
 var mins = fecha.getMinutes();
 
 var postear = function() {
-	T.post('statuses/update', {status: 'Prueba del console'});
+	T.post('statuses/update', {status: 'Prueba del consolelogggg'});
 	console.log("Hora: " + hs + " : " + mins);
 }
 
