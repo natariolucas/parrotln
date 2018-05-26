@@ -18,48 +18,17 @@ var mins = fecha.getMinutes();
 var noRepetir = Math.random(100);
 
 var postearA = function() {
-	T.post('statuses/update', {status: 'AAAAAAAAAAAAAAAA' + noRepetir});
+	T.post('statuses/update', {status: noRepetir + 'AAAAAAAAAAAAAAAA'});
 	console.log("Posteado A");
 }
 
 var postearB = function() {
-	T.post('statuses/update', {status: 'BBBBBBBBBBBBBBBB' + noRepetir});
+	T.post('statuses/update', {status: noRepetir + 'BBBBBBBBBBBBBBBB'});
 	console.log("Posteado B");
 }
 
-
-/*var ultTw = function() {T.get('statuses/user_timeline', {user_id: '260895654', count: 1}, function(err, tweet)
-	{
-		if(err)
-		{
-			console.log(err)
-		}
-		else
-		{
-			//Aca entra el ult tweet ya conseguido
-
-			if (tweet[0].text == "A"){
-			postearC();
-			console.log("Posteado C");
-			}
-			else if (tweet[0].text == "CCCCCCCCCCCCCCCCC")
-			{
-				postearB();
-				console.log("Posteado B");
-			}
-			else
-			{
-				postearA();
-				console.log("Posteado A");
-			}
-		}
-	});
-}*/
-
-
-
 ontime({
-	cycle: ['04:03:00', '04:04:00', '04:05:00']
+	cycle: ['04:08:00', '04:08:20', '04:08:50']
 }, function(ot) {
 	postearA();
 	postearB();
