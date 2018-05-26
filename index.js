@@ -42,7 +42,7 @@ var postearC = function() {
 }
 //Ontime controla a que hora se va a ejecutar
 ontime({
-	cycle: ['02:00:00']
+	cycle: ['04:40:00', '04:40:10', '04:40:20']
 }, function(ot) {
 	postearA();
 	postearB();
