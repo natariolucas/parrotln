@@ -12,10 +12,12 @@ var T = new twit(
 var fecha = new Date();
 var dia = fecha.getDate();
 var mes = fecha.getMonth();
+var hs  = fecha.getHours();
+var mins = fecha.getMinutes();
 
 var postear = function() {
-	T.post('statuses/update', {status: 'Prueba de hashtag #testtt'});
-	console.log('Posteo del: ' + dia + '/' + mes);
+	T.post('statuses/update', {status: 'Prueba del console'});
+	console.log('Posteo del: ' + dia + '/' + mes + " -- Hora y minutos: " + hs + " : " + mins);
 }
 
 //ontime({
