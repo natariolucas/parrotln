@@ -14,14 +14,14 @@ var dia = fecha.getDate();
 var mes = fecha.getMonth();
 
 var postear = function() {
-	T.post('statuses/update', {status: 'Prueba de hashtag #test'});
+	T.post('statuses/update', {status: 'Prueba de hashtag #testtt'});
 	console.log('Posteo del: ' + dia + '/' + mes);
 }
 
-ontime({
-	cycle: ['01:16:30']
-}, function(ot) {
+//ontime({
+//	cycle: ['01:16:30']
+//}, function(ot) {
 	postear();
-	ot.done()
-	return
-})
+//	ot.done()
+//	return
+//})
