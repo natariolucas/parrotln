@@ -20,10 +20,10 @@ var postear = function() {
 	console.log('Posteo del: ' + dia + '/' + mes + " -- Hora y minutos: " + hs + " : " + mins);
 }
 
-//ontime({
-//	cycle: ['01:16:30']
-//}, function(ot) {
+ontime({
+	cycle: ['02:21:']
+}, function(ot) {
 	postear();
-//	ot.done()
-//	return
-//})
+	ot.done()
+	return
+})
