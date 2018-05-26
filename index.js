@@ -18,17 +18,19 @@ var mins = fecha.getMinutes();
 var noRepetir = Math.random(100);
 
 var postearA = function() {
-	T.post('statuses/update', {status: noRepetir + 'AAAAAAAAAAAAAAAA'});
+    noRepetir = Math.random(100);
+	T.post('statuses/update', {status: 'AAAAAAAAAAAAAAAA' + noRepetir});
 	console.log("Posteado A");
 }
 
 var postearB = function() {
-	T.post('statuses/update', {status: noRepetir + 'BBBBBBBBBBBBBBBB'});
+	noRepetir = Math.random(100);
+	T.post('statuses/update', {status: 'BBBBBBBBBBBBBBBB' + noRepetir});
 	console.log("Posteado B");
 }
 
 ontime({
-	cycle: ['04:08:00', '04:08:20', '04:08:50']
+	cycle: ['04:14:00', '04:14:10', '04:14:30']
 }, function(ot) {
 	postearA();
 	postearB();
