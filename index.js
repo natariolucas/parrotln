@@ -15,9 +15,9 @@ var T = new twit(
 var noRepetir = Math.random(100);
 
 //Tweets promocionales
-var A = ' UBER promo/gift code May 2018 \n NEW FOR 1ST RIDE!!!!! \n \n👉vj0rbx👈 \n \n \n#UberCode \n#GiftCode \n#Uber \n';
-var B = 'Conseguí tu primer viaje de Uber gratis usando este código!! Ya ya \n 👉vj0rbx👈 \n \n \n #CodigosUber \n #PromoUber \n';
-var C = 'Uber promo code for your 1st ride free or a big discount!!!! Only May 2018 \n \n 👉vj0rbx👈  \n \n \n#Uber \n #GiftCode \n #UberGiftCode \n #UberCodes \n';
+var A = ' UBER promo/gift code May 2018 \n NEW FOR 1ST RIDE!!!!! \n \n👉rdx9tn👈 \n \n \n#UberCode \n#GiftCode \n#Uber \n';
+var B = 'Conseguí tu primer viaje de Uber gratis usando este código!! Ya ya \n 👉rdx9tn👈 \n \n \n #CodigosUber \n #PromoUber \n';
+var C = 'Uber promo code for your 1st ride free or a big discount!!!! Only May 2018 \n \n 👉rdx9tn👈  \n \n \n#Uber \n #GiftCode \n #UberGiftCode \n #UberCodes \n';
 
 //Funciones que twittean
 var postearA = function() {
