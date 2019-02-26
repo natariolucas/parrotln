@@ -19,6 +19,11 @@ var noRepetir = Math.random(100);
 //var B = 'Conseguí tu primer viaje de Uber gratis usando este código!! Ya ya \n 👉vj0rbx👈 \n \n \n #CodigosUber \n #PromoUber \n';
 //var C = 'Uber promo code for your 1st ride free or a big discount!!!! Only May 2018 \n \n 👉vj0rbx👈  \n \n \n#Uber \n #GiftCode \n #UberGiftCode \n #UberCodes \n';
 
+var A = '�Dinero GRATIS? Registrate con este link por tiempo limitado y obten� un cupon inicial \n https://invite.mercadopago.com/mp-argentina/mgm/231602276 \n \n #MPCupon #Descuentos #Cupon #Cupones';
+var B = ' ';
+var C = ' ';
+
+
 //Funciones que twittean
 var postearA = function() {
     noRepetir = Math.random(100);
@@ -45,7 +50,7 @@ var postearC = function() {
 }
 //Ontime controla a que hora se va a ejecutar
 ontime({
-	cycle: ['02:00:00']
+	cycle: ['20:55:00']
 }, function(ot) {
 	postearA();
 	postearB();
