@@ -5,10 +5,10 @@ var ontime = require('ontime')
 //Tokens de la App creada en la cuenta (privadas)
 var T = new twit(
 	{
-		consumer_key: 'EJeDRXQy1crTvTblYHWDBZAb5',
-		consumer_secret: 'g4xcxd91rVfJkMunNLZrSlaiw4F5QeG1wn90DftVvKwlhSVGIR',
-		access_token: '260895654-2B5xGJO5KIwrdo8lj3ldtYjvF9kcsFlr6zb3Av25',
-		access_token_secret: 'Vkut6POrdzFZLKfIbSfQuqFLFToaTQBtlnBBw9P1O4VRv'
+		consumer_key: 'h6YCbrMAmC7SCNpNzOJmRxE4X',
+		consumer_secret: 'ipi0wn4wbkEEHwb1wfgF1vUNMXiD4bCZwCwPoxQ7bKVsmJZv1i',
+		access_token: '1102712268691853317-wYmvvsq1jTY2d4Uuvd80JY9qAEqbvD',
+		access_token_secret: 'usr1j7OWlM34RCIcKGs3HxYQt6cfnEYJS42FxwJEk5XQs'
 	});
 
 //Genera el nro random para que no se detecte el spam (tweet repetido)
@@ -20,9 +20,9 @@ var noRepetir = Math.random(100);
 //var C = 'Uber promo code for your 1st ride free or a big discount!!!! Only May 2018 \n \n ðŸ‘‰vj0rbxðŸ‘ˆ  \n \n \n#Uber \n #GiftCode \n #UberGiftCode \n #UberCodes \n';
 
 var A = '¿Dinero GRATIS? Registrate con este link por tiempo limitado y obtené un cupon inicial \n https://invite.mercadopago.com/mp-argentina/mgm/231602276 \n \n #MPCupon #Descuentos #Cupon #Cupones';
-var B = ' ';
-var C = ' ';
-
+var B = 'UBER promo/gift code April 2019 \n NEW FOR 1ST RIDE!!!!! \n \n rdx9tn \n \n \n #UberCode \n #GiftCode \n #Uber \n';
+var C = 'Consegui tu primer viaje de Uber gratis usando este codigo!! Ya ya \n rdx9tn \n \n \n #CodigosUber \n #PromoUber \n';
+var D = 'Uber promo code for your 1st ride free or big discount!!!! Only April 2019 \n \n rdx9tn \n \n \n #Uber \n #GiftCode \n #UberCodes \n ';
 
 //Funciones que twittean
 var postearA = function() {
@@ -48,6 +48,16 @@ var postearC = function() {
 	T.post('direct_messages/new', {screen_name: 'NatarioLucas_', text: 'Posteado C'});
 	console.log('Posteado C');
 }
+
+var postearD = function() {
+	noRepetir = Math.random(100);
+	T.post('statuses/update', {status: D + noRepetir});
+	//Avisame
+	T.post('direct_messages/new', {screen_name: 'NatarioLucas_', text: 'Posteado D'});
+	console.log('Posteado D');
+}
+
+
 //Ontime controla a que hora se va a ejecutar
 ontime({
 	cycle: ['20:55:00']
@@ -55,6 +65,7 @@ ontime({
 	postearA();
 	postearB();
 	postearC();
+ postearD();
 	ot.done();
 	return
 })
