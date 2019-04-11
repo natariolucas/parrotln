@@ -20,9 +20,10 @@ var noRepetir = Math.random(100);
 //var C = 'Uber promo code for your 1st ride free or a big discount!!!! Only May 2018 \n \n ðŸ‘‰vj0rbxðŸ‘ˆ  \n \n \n#Uber \n #GiftCode \n #UberGiftCode \n #UberCodes \n';
 
 var A = '¿Dinero GRATIS? Registrate con este link por tiempo limitado y obtené un cupon inicial \n https://invite.mercadopago.com/mp-argentina/mgm/231602276 \n \n #MPCupon #Descuentos #Cupon #Cupones';
-var B = 'UBER promo/gift code April 2019 \n NEW FOR 1ST RIDE!!!!! \n \n rdx9tn \n \n \n #UberCode \n #GiftCode \n #Uber \n';
-var C = 'Consegui tu primer viaje de Uber gratis usando este codigo!! Ya ya \n rdx9tn \n \n \n #CodigosUber \n #PromoUber \n';
-var D = 'Uber promo code for your 1st ride free or big discount!!!! Only April 2019 \n \n rdx9tn \n \n \n #Uber \n #GiftCode \n #UberCodes \n ';
+var B = 'UBER promo/gift code April 2019 \n NEW FOR 1ST RIDE!!!!! \n \n vj0rbx \n \n \n #UberCode \n #GiftCode \n #Uber \n';
+var C = 'Consegui tu primer viaje de Uber gratis usando este codigo!! Ya ya \n vj0rbx \n \n \n #CodigosUber \n #PromoUber \n';
+var D = 'Uber promo code for your 1st ride free or big discount!!!! Only April 2019 \n \n vj0rbx \n \n \n #Uber \n #GiftCode \n #UberCodes \n ';
+var E = 'GANASTE DINERO! $$ Registrate con este link por tiempo limitado y obtené tu cupon \n https://bit.ly/2Ghla94 \n \n #MercadoPago #Descuentos #Groupon #Cupon';
 
 //Funciones que twittean
 var postearA = function() {
@@ -57,6 +58,14 @@ var postearD = function() {
 	console.log('Posteado D');
 }
 
+var postearE = function() {
+	noRepetir = Math.random(100);
+	T.post('statuses/update', {status: E + noRepetir});
+	//Avisame
+	T.post('direct_messages/new', {screen_name: 'NatarioLucas_', text: 'Posteado E'});
+	console.log('Posteado E');
+}
+
 
 //Ontime controla a que hora se va a ejecutar
 ontime({
@@ -66,6 +75,7 @@ ontime({
 	postearB();
 	postearC();
  postearD();
+ postearE();
 	ot.done();
 	return
 })
